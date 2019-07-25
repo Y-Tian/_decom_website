@@ -2,11 +2,11 @@ window.human = false;
 
 var canvasEl = document.querySelector('.fireworks');
 var ctx = canvasEl.getContext('2d');
-var numberOfParticules = 10;
+var numberOfParticules = 6;
 var pointerX = 0;
 var pointerY = 0;
 var tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
-var colors = ['grey','pink'];
+var colors = ['#ffffff','#ffffff'];
 
 function setCanvasSize() {
   canvasEl.width = window.innerWidth * 2;
@@ -36,33 +36,13 @@ function createParticule(x,y) {
   p.x = x;
   p.y = y;
   p.color = colors[anime.random(0, colors.length - 1)];
-  p.radius = anime.random(10, 12);
+  p.radius = anime.random(3, 5);
   p.endPos = setParticuleDirection(p);
   p.draw = function() {
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
     ctx.fillStyle = p.color;
     ctx.fill();
-  }
-  return p;
-}
-
-function createCircle(x,y) {
-  var p = {};
-  p.x = x;
-  p.y = y;
-  p.color = '#FFF';
-  p.radius = 0.1;
-  p.alpha = .5;
-  p.lineWidth = 6;
-  p.draw = function() {
-    ctx.globalAlpha = p.alpha;
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
-    ctx.lineWidth = p.lineWidth;
-    ctx.strokeStyle = p.color;
-    ctx.stroke();
-    ctx.globalAlpha = 1;
   }
   return p;
 }
@@ -74,7 +54,6 @@ function renderParticule(anim) {
 }
 
 function animateParticules(x, y) {
-  var circle = createCircle(x, y);
   var particules = [];
   for (var i = 0; i < numberOfParticules; i++) {
     particules.push(createParticule(x, y));
@@ -90,7 +69,7 @@ function animateParticules(x, y) {
   })
     .add({
     targets: circle,
-    radius: anime.random(80, 160),
+    radius: anime.random(200, 400),
     lineWidth: 0,
     alpha: {
       value: 0,
