@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&effect=outline|3d-float');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+	-webkit-animation: fadein 1s;
+	text-align: center;
+	font-family: 'Raleway', cursive;
+	overflow: hidden;
+	position: absolute;
+	border: 0.5vw solid white;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: black;
+	color: white;
+	margin: 1vw;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+h1{
+	font-size: 6vw;
+	margin-bottom: 0;
+}  	
+
+h2{
+	color: #686767;
+}
+
+h3{
+	font-size: 3vw;
+	margin-bottom: 0;
+}
+
+canvas{
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	width: 100%;
+  	z-index: -1;
+}
+
+#header{
+	position: fixed;
+	top: 10%;
+	width: 100%;
+}
+
+#aboutMe{
+	-webkit-animation: fadein 3s;
+	position: fixed;
+	width: 50%;
+	bottom: 20%;
+	left:0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 100%;
+	display: none;
+}
+
+#projects{
+	-webkit-animation: fadein 3s;
+	position: fixed;
+	width: 50%;
+	bottom: 5%;
+	left:5%;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 100%;
+	display: none;
+}
+
+#aboutMe{
+	line-height: 3vw;
+	font-size: 100%;
+}
+
+#projects-container{
+	display: flex;
+	justify-content: space-between;
+}
+
+.projects-img{
+	width: 50px;
+	align: bottom;
+}
+
+#subtitle{
+	text-align: center;
+	color: white;
+}
+
+#footer{
+	margin: 0 auto;
+	padding-top: 0.5vw;
+	padding-bottom: 2vw;
+	color: #a8a8a8;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 1%;
+	width: 95%;
+	text-align: center;
+}
+
+a.title, a.title:link, a.title:visited{
+	text-decoration:none;
+	color: white;
+	transition-duration: 0.4s;
+}
+
+a.button:link, a.button:visited {
+    color: white;
+    border: 2px solid white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 6px;
+    font-family: 'Raleway', cursive;
+    margin: 3vw;
+}
+
+
+a.button:hover, a.button:active {
+   border: 2px solid lightgreen;
+   padding: 10px 20px;
+   color: lightgreen;
+}
+
+
+a.headerLinks:link, a.headerLinks:visited{
+	text-decoration:none;
+	padding: 2vw;
+	padding-top: 1vw;
+	-webkit-transition-duration: 0.4s; /* Safari */
+	align-self: center;
+}
+
+a.title:hover, a.headerLinks:hover {
+	transition-duration: 0.4s;
+	color: lightgreen;
+	font-size: 120%;
+}
+
+.headerimg{
+	width: 30px;
+	transition-duration: 0.4s;
+}
+
+.headerimg:hover{
+	transition-duration: 0.4s;
+	width: 50px;
+}
+
+#headerText{
+	position: fixed;
+	right: 2vw;
+	bottom: 1.5vw;
+}
+
+#project1description{
+	text-align: center;
+	color: white;
+	word-break: break-all;
+}
