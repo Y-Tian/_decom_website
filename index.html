@@ -5,21 +5,6 @@
 
         <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
 	</head>
-    <script>
-        function showAboutMe(){
-            document.getElementById("aboutMe").style.display = "block";
-            if(document.getElementById("projects").style.display = "block"){
-                document.getElementById("projects").style.display = "none";
-            }
-        }
-
-        function showProjects(){
-            document.getElementById("projects").style.display = "block";
-            if(document.getElementById("aboutMe").style.display = "block"){
-                document.getElementById("aboutMe").style.display = "none";
-            }
-        }
-    </script>
 	<title>Tony Tian</title>
 	<link rel="shortcut icon" href="icecream.png" />
 
@@ -38,8 +23,6 @@
         </div>
         <h1><a class="title">Tony Tian</a></h1>
         <p id="subtitle">2B Computer Engineering</p>
-        <a class="button" href="#" onclick="showAboutMe()">About Me</a>
-        <a class="button" href="#" onclick="showProjects()">Projects</a>
     </div>
 		<div id="body">
 			<div id="aboutMe">
