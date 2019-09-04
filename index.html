@@ -19,6 +19,20 @@
                 document.getElementById("aboutMe").style.display = "none";
             }
         }
+        function show(){
+            document.getElementById(".hover_bkgr_fricc").show();
+        }
+        $(window).load(function () {
+            $(".trigger_popup_fricc").click(function(){
+                $('.hover_bkgr_fricc').show();
+            });
+            $('.hover_bkgr_fricc').click(function(){
+                $('.hover_bkgr_fricc').hide();
+            });
+            $('.popupCloseButton').click(function(){
+                $('.hover_bkgr_fricc').hide();
+            });
+        });
     </script>
 	<title>Tony Tian</title>
 	<link rel="shortcut icon" href="icecream.png" />
@@ -40,6 +54,15 @@
         <p id="subtitle">2B Computer Engineering</p>
         <a class="button" href="#" onclick="showAboutMe()">About Me</a>
         <a class="button" href="#" onclick="showProjects()">Projects</a>
+        <a class="trigger_popup_fricc" href="#" onclick="show()">Click here to show the popup</a>
+
+        <div class="hover_bkgr_fricc">
+            <span class="helper"></span>
+            <div>
+                <div class="popupCloseButton">X</div>
+                <p>Add any HTML content<br />inside the popup box!</p>
+            </div>
+        </div>
     </div>
 		<div id="body">
 			<div id="aboutMe">
