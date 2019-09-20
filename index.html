@@ -5,35 +5,6 @@
 
         <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js'></script>
 	</head>
-    <script>
-        function showAboutMe(){
-            document.getElementById("aboutMe").style.display = "block";
-            if(document.getElementById("projects").style.display = "block"){
-                document.getElementById("projects").style.display = "none";
-            }
-        }
-
-        function showProjects(){
-            document.getElementById("projects").style.display = "block";
-            if(document.getElementById("aboutMe").style.display = "block"){
-                document.getElementById("aboutMe").style.display = "none";
-            }
-        }
-        function show(){
-            document.getElementById(".hover_bkgr_fricc").show();
-        }
-        $(window).load(function () {
-            $(".trigger_popup_fricc").click(function(){
-                $('.hover_bkgr_fricc').show();
-            });
-            $('.hover_bkgr_fricc').click(function(){
-                $('.hover_bkgr_fricc').hide();
-            });
-            $('.popupCloseButton').click(function(){
-                $('.hover_bkgr_fricc').hide();
-            });
-        });
-    </script>
 	<title>Tony Tian</title>
 	<link rel="shortcut icon" href="icecream.png" />
 
@@ -51,40 +22,32 @@
             </div>
         </div>
         <h1><a class="title">Tony Tian</a></h1>
-        <p id="subtitle">2B Computer Engineering</p>
-        <a class="button" href="#" onclick="showAboutMe()">About Me</a>
-        <a class="button" href="#" onclick="showProjects()">Projects</a>
-        <a class="trigger_popup_fricc" href="#" onclick="show()">Click here to show the popup</a>
-
-        <div class="hover_bkgr_fricc">
-            <span class="helper"></span>
+        <p id="subtitle">✧･ﾟ: *✧･ﾟ:* 2B Computer Engineering *:･ﾟ✧*:･ﾟ✧</p>
+        <a class="button" href="#aboutme">About Me</a>
+        <div id="aboutme" class="modalDialog">
             <div>
-                <div class="popupCloseButton">X</div>
-                <p>Add any HTML content<br />inside the popup box!</p>
+                <a href="#close" title="Close" class="close">/></a>
+                <h2>( ͡U ω ͡U ) About Me</h2>
+                <p>Hi! My name is Tony and I study 2B Computer Engineering @UWaterloo. Currently looking for a Winter 2020 Internship, 
+                   so feel free to check out my resume!</p>
+                <p>I'm interested in the following areas of Software: Backend, Infrastructure, and SRE.</p>
+                <p>In my spare time, I love to play competitive badminton on my School's Badminton Club. I'm also a huge fan of Gundam and I've amassed almost all of the RG models!</p>
             </div>
         </div>
-    </div>
-		<div id="body">
-			<div id="aboutMe">
-				<p>Hi! My name is Tony and I study 2B Computer Engineering @UWaterloo. Currently looking for a Winter 2020 Internship, so feel free to check out my resume above!</p>
-			</div>
-
-            <div id="projects">
-                <div id="projects-container">
-                    <div id="projects-card">
-                        <h3> Coinsys Bot </h3>
-                        <p id="projectdescription">A GoLang based Cryptocurrency analyzer that utilizes the MACD signal line & histogram. Graphs the visuals using Go-grapher!</p>
-                        <a class="button" href="https://github.com/Y-Tian/CoinSys" target="_blank">Check it out</a>
-                    </div>
-                    <div id="projects-card">
-                        <h3> STALK.bot </h3>
-                        <p id="projectdescription">My project from Hack the North! A webcam that uses Python's OpenCV with facial cascade classifiers to track and follow human faces.
-                        </p>
-                        <a class="button" href="https://github.com/Y-Tian/Python-ComputerVision" target="_blank">Check it out</a>
-                    </div>
+        <a class="button" href="#projects">Projects</a>
+        <div id="projects" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">/></a>
+                <div id="projects">
+                    <h2>( ͡U ω ͡U ) Projects</h2>
+                    <h4><a href="https://github.com/Y-Tian/CoinSys" style="color:rgb(255, 255, 255)" target="_blank">Coinsys Bot</a></h3>
+                    <p id="projectdescription">A GoLang based Cryptocurrency analyzer that utilizes the MACD signal line & histogram. Graphs the visuals using Go-grapher!</p>
+                    <h4><a href="https://github.com/Y-Tian/SlapsRoofOfCar.bot" style="color:rgb(255, 255, 255)" target="_blank">SlapsRoofOfCar.bot</a></h3>
+                    <p id="projectdescription">Found the perfect used car? Use this bot to check if it's actually a good deal. Goodluck! Built with Python & Keras.</p>
                 </div>
             </div>
         </div>
+    </div>
     <canvas class="fireworks"></canvas>
     <script type="text/javascript" src="script.js"></script>
 	</body>
